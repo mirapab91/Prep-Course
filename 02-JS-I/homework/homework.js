@@ -81,7 +81,7 @@ function tienenMismaLongitud(str1, str2) {
   else {
   return false;
 }
-
+}
 
 function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
@@ -97,7 +97,7 @@ function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num > 90){
+  if (num > 50){
     return true;
   }
   
@@ -265,4 +265,4 @@ module.exports = {
   areaDelTriangulo,
   deEuroAdolar,
   esVocal,
-};
+}
