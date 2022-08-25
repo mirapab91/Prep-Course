@@ -102,10 +102,10 @@ function estaEnRango(numero) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (numero < 50 && numero > 20){
-    return "true";
+    return true;
   }
   else {
-    return "false";
+    return false;
   }
 }
 
@@ -117,10 +117,10 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  if (numero % 2 === 0){
-    return "true";
+  if (numero === math.floor(numero)){
+    return true;
   }
-  else "false";
+  return false;
 }
 
 function fizzBuzz(numero) {
