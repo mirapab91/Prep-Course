@@ -130,7 +130,6 @@ function fizzBuzz(numero) {
   // De lo contrario, devuelve el numero
   if (numero % 3 === 0 && numero % 5 === 0){
     return "fizzbuzz";
-  
   }
   if (numero % 3 === 0){
     return "fizz";
@@ -138,10 +137,8 @@ function fizzBuzz(numero) {
   if (numero % 5 === 0){
     return "buzz";
   }
-  else {
-    return numero;
+  return numero;
   }
-}
 
 function operadoresLogicos(num1, num2, num3) {
   //La función recibe tres números distintos. 
@@ -199,6 +196,7 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
+
 }
 
 function tieneTresDigitos(numero){
