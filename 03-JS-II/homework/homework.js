@@ -73,20 +73,15 @@ function colors(color) {
   //Usar el statement Switch.
   switch (color){
     case "blue":
-      console.log("This is blue");
-      break;
+      return "This is blue";
       case "red":
-        console.log("This is red");
-        break;
+        return "This is red";
         case "green":
-          console.log("This is green");
-          break;
+          return "This is green";
           case "orange":
-            console.log("This is orange");
-            break;
+            return "This is orange";
             default:
-              console.log("Color not found");
-              break;
+              return "Color not found";
   }
 }
 
@@ -98,7 +93,7 @@ function esDiezOCinco(numero) {
     return true;
   }
     else{
-      return "false";
+      return false;
   }
 }
 
@@ -154,6 +149,7 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
+  if (num1 > num2 && num1 > num3 && num1 )
 }
 
 function esPrimo(numero) {
