@@ -137,7 +137,7 @@ function fizzBuzz(numero) {
   if (numero % 5 === 0){
     return "buzz";
   }
-  return numero;
+   return numero;
   }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -196,22 +196,39 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-
-}
+  var array = [1; 2; 3; 4; 5; 6; 7; 8; 9; 10];
+  for (var i = 0; i < 11; i++){
+    array.push(6*i);
+  }
+  return array;
+  }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  
+  let i = numero + "";
+  let digitosTres = i.length;
+  if (digitosTres === 3){
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  let i = 1;
+  let resultado = numero;
+  do {
+   resultado === resultado + 5;
+  i === i + 1;
 }
-
-
+   while (i < 9);
+   return resultado;
+}
 // No modificar nada debajo de esta línea
 // --------------------------------
 
