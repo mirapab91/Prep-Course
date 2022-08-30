@@ -10,6 +10,8 @@ function devolverPrimerElemento(array) {
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  // return array.pop();
+  //return array.shift();
   return array [array.length - 1];
 }
 
@@ -26,6 +28,12 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  // let array2 = []
+  // for (let i = 0; i < array.length; i++){
+  //array2.push(array[i] + 1);
+  //}
+  //return array2;}
+  
   const array2 = [];
   for (let i = 0; i < array.length; i++ ){
     array2[i] = array[i] + 1;
@@ -38,9 +46,11 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  array[array.length] = elemento;
+  //array[array.length] = elemento;
+  array.push(elemento);
   return array;
 }
+
 
 
 function agregarItemAlComienzoDelArray(array, elemento) {
@@ -59,10 +69,8 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  let a = "Las";
-  let palabras = "palabras";
-  let frase = a + " " + palabras + " " + ".";
-  return frase;
+
+  return palabras.join(" ");
 }
 
 
@@ -70,6 +78,12 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  for (var i = 0; i < array.length; i++){
+    if (array[i] === elemento) {
+      return true;
+    }
+  }
+  return false;
 }
 
 
@@ -77,6 +91,7 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  
 }
 
 
