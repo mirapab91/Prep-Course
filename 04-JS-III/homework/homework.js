@@ -69,7 +69,12 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-
+  //let frase = palabras[0];
+  //for(let i = 1; i < palabras.length; i++) {
+    //frase = frase + ' ' + palabras[1]; 
+  //}
+   //return frase;
+  
   return palabras.join(" ");
 }
 
@@ -91,7 +96,11 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
-  
+  let a1 = (0);
+  for (i = 0; i < numeros.length; i++){
+    a1 = a1 + numeros[i];
+  }
+  return a1;
 }
 
 
@@ -99,6 +108,11 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  let b1 = (0);
+  for ( i = 0; i < resultadosTest.length; i++){
+    b1 = b1 + resultadosTest[1];
+  }
+  return resultadosTest % b1[i];
 }
 
 
