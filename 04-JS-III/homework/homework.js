@@ -96,7 +96,7 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
-  let a1 = (0);
+  let a1 = 0;
   for (i = 0; i < numeros.length; i++){
     a1 = a1 + numeros[i];
   }
@@ -108,11 +108,13 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-  let b1 = (0);
-  for ( i = 0; i < resultadosTest.length; i++){
-    b1 = b1 + resultadosTest[1];
+  let b1 = 0;
+  let promedio = 0;
+  for(var i = 0; i < resultadosTest.length; i++){
+    b1 = b1 + resultadosTest[i];
   }
-  return resultadosTest % b1[i];
+  promedio = b1 / resultadosTest.length;
+  return promedio
 }
 
 
@@ -120,20 +122,45 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  //return math.max (...numeros)
+  let mayor = numeros[0];
+  for( var i = 0; i < numeros.length; i++){
+    if (numeros[i] > mayor){
+    mayor = numeros[i];
+  }
+}
+  return mayor;
 }
 
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
-  // Escribe tu código aquí:
+  // Escribe tu código aquí:  
+  //var producto = 1;
+  // for ( var i = 0; i < arguments.length; i++){}
+  if (arguments.length === 0){
+    return 0;
+  }
+  let producto = arguments[0];
+  for ( var i = 1; i < arguments.length; i++){
+    producto = producto * arguments[i];
+  }
+  return producto;
 }
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+  //[ 10, 10, 18, 21 ]
+  let cantidad = 0;
+  for (var i = 0; i < arreglo.length; i++){
+    if (arreglo[i] > 18){
+      cantidad = cantidad + 1;
+    }
+  } 
+  return cantidad;
 }
 
 
