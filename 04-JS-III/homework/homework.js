@@ -197,6 +197,7 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí 
+  //if( arreglo[0] === arreglo[i]){ return true;}
   var unno  = arreglo[0];
   for(var i = 1; i < arreglo.length; i++){
     if(unno !== arreglo[i]){
@@ -211,6 +212,10 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  //if(array[i] === "Enero"){newArray.push(array[i])}
+  //if(array[i] === "Marzo"){newArray.push(array[i])}
+  //if(array[i] === "Noviembre"){newArray.push(array[i])}
+  //if(newArray.length === 3)return newArray;
   var messes = [];
 
   for(var i = 0; i < array.length; i++){
@@ -232,7 +237,7 @@ function mayorACien(array) {
   var mayorACien = [];
 
   for(var i = 0; i < array.length; i++){
-    if(array[i] > 100){
+    if(array[i] > 100 && array[i] <= 200){
     mayorACien.push(array[i])
     }
   }
@@ -249,8 +254,18 @@ function breakStatement(numero) {
   //Pista: usá el statement 'break'
   // Tu código:
   var breakStatement = [];
+  var i = 0;
 
-  for(var i = 0; i < numero.length; i++)
+  do{
+    numero+=2
+    i++
+    breakStatement.push(numero)
+    if(numero === i){
+      return "Se interrumpió la ejecución";
+    }
+  }
+  while(i < 10) return breakStatement;
+  
 }
 
 
@@ -261,6 +276,18 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var continueStatement = [];
+  var i = 0;
+
+ while(i < 10){
+  i++;
+  if(i === 5)
+  continue
+  numero +=2;
+  continueStatement.push(numero);
+ }
+ return continueStatement;
+
 }
 
 
