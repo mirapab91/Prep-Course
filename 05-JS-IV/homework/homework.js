@@ -96,6 +96,8 @@ function tienePropiedad (objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
+  /*if(objeto[propiedad]){return true} */
+  
   // return objeto.hasOwnProperty(propiedad);
   if(objeto.hasOwnProperty(propiedad)){
   return true;
