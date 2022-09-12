@@ -1,5 +1,7 @@
 // No cambies los nombres de las funciones.
 
+const ParserBlock = require("markdown-it/lib/parser_block");
+
 function crearGato (nombre, edad) {
   // Crear un nuevo objeto con la propiedad "nombre" y el valor definido como el argumento "nombre".
   // Agrega una propiedad al objeto con el nombre "edad" y usa el valor definido en el argumento "edad"
@@ -23,6 +25,8 @@ function agregarPropiedad (objeto, property) {
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
+  /*objeto[property] = null;
+  return objeto;}*/
   var agregarPropiedad = {
     x : 1,
     y : 2,
@@ -37,12 +41,18 @@ function invocarMetodo (objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
+ objeto[metodo]()
 }
 
 function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
+  /* var producto = objetoMisterioso["numeroMisterioso"] * 5;
+  return producto;*/
+var multiplicacion = objetoMisterioso.numeroMisterioso * 5;
+
+  return multiplicacion ;
 
 }
 
@@ -51,12 +61,21 @@ function eliminarPropiedad (objeto, unaPropiedad) {
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
   // Tu código:
+
+  delete objeto[unaPropiedad];
+  return objeto;
 }
 
 function nuevoUsuario (nombre, email, password) {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
   // Devuelve el objeto
   // Tu código:
+  var nuevoObjeto = {
+    nombre : nombre,
+    email: email,
+    password : password
+  }
+  return nuevoObjeto;
 
 }
 
@@ -64,6 +83,12 @@ function tieneEmail (usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
+  if(usuario.email){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 function tienePropiedad (objeto, propiedad) {
@@ -71,6 +96,13 @@ function tienePropiedad (objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
+  // return objeto.hasOwnProperty(propiedad);
+  if(objeto.hasOwnProperty(propiedad)){
+  return true;
+}
+else {
+  return false;
+ }
 }
 
 function verificarPassword (usuario, password) {
@@ -78,12 +110,21 @@ function verificarPassword (usuario, password) {
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // Tu código:
+  //if(usuario["password"] === password)
+  if(usuario.password === password){
+    return true;
+  } 
+  else {
+    return false;
+  }
 }
 
 function actualizarPassword (usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
   // Devuelve el objeto
   // Tu código:
+  usuario.password = nuevaPassword
+  return usuario;
 }
 
 function agregarAmigo (usuario, nuevoAmigo) {
@@ -91,6 +132,13 @@ function agregarAmigo (usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // Tu código:
+/*var amigos = usuario["amigos"];
+amigos.push(nuevoAmigo);
+return usuario;*/
+
+usuario.amigos.push(nuevoAmigo);
+return usuario;
+
 }
 
 function pasarUsuarioAPremium (usuarios) {
@@ -99,6 +147,18 @@ function pasarUsuarioAPremium (usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+
+/* usuarios = [{esPremium}, {esPremium}, {esPremium}];
+usuarios[i].esPremium = true;*/
+//for(var key of usuarios){
+// key.esPremium = true;  
+
+
+for(var i = 0; i < usuarios.length; i++){
+  usuarios[i]["esPremium"] = true;
+}
+return usuarios;
+
 }
 
 function sumarLikesDeUsuario (usuario) {
@@ -108,6 +168,16 @@ function sumarLikesDeUsuario (usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+  /* for(var key posts){
+    suma = suma + key.likes} return suma;*/
+  
+  var posts = usuario.posts;
+var resultado = 0;
+  for(var i = 0; i < posts.length; i++){
+   resultado = resultado + posts[i].likes;
+}
+return resultado;
+
 }
 
 function agregarMetodoCalculoDescuento (producto) {
@@ -120,7 +190,12 @@ function agregarMetodoCalculoDescuento (producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-
+producto.calcularPrecioDescuento = function(){
+  var descuento = producto.precio * producto.porcentajeDeDescuento;
+  var precioFinal = producto.precio - descuento;
+  return precioFinal;
+}
+return producto;
 }
 
 // No modificar nada debajo de esta línea
